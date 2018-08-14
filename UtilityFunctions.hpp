@@ -1,5 +1,5 @@
-#ifndef __UTILITYFUNCTIONS_HH__
-#define __UTILITYFUNCTIONS_HH__
+#ifndef __UTILITYFUNCTIONS_HPP__
+#define __UTILITYFUNCTIONS_HPP__
 
 #include <string.h>
 
@@ -24,4 +24,17 @@ void strcpy_safe(char (& output)[charCount], const char * pSrc)
 	output[charCount - 1] = 0;
 }
 
-#endif //__UTILITYFUNCTIONS_HH__
+void strcpy_safe(char * (& output), const char * pSrc)
+{
+	size_t charCount = sizeof(output) / sizeof(output[0]);
+
+	if(NULL == output) return;
+
+	//YourCopyNFunction(output, pSrc, charCount);
+	// Copy the string -- don't copy too many bytes.
+	strncpy(output, pSrc, charCount);
+	// Ensure null-termination.
+	output[charCount - 1] = 0;
+}
+
+#endif //__UTILITYFUNCTIONS_HPP__
