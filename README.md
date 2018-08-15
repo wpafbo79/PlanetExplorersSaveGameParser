@@ -18,3 +18,8 @@ Run `pesavegameparse`.
 ```shell
 ./pesavegameparse
 ```
+
+License
+-----
+Licensed under
+[GPL v3.0](https://github.com/wpafbo79/PlanetExplorersSaveGameParser/blob/master/LICENSE)
