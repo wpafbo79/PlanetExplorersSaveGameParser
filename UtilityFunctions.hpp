@@ -37,14 +37,13 @@
         version next time."
 */
 template <size_t charCount>
-void strcpy_safe(char (& output)[charCount], const char * pSrc)
-{
-	/// @todo Implement YourCopyNFunction(output, pSrc, charCount);
-	//YourCopyNFunction(output, pSrc, charCount);
-	// Copy the string -- don't copy too many bytes.
-	strncpy(output, pSrc, charCount);
-	// Ensure null-termination.
-	output[charCount - 1] = 0;
+void strcpy_safe(char (& output)[charCount], const char * pSrc) {
+  /// @todo Implement YourCopyNFunction(output, pSrc, charCount);
+  //YourCopyNFunction(output, pSrc, charCount);
+  // Copy the string -- don't copy too many bytes.
+  strncpy(output, pSrc, charCount);
+  // Ensure null-termination.
+  output[charCount - 1] = 0;
 }
 
 /**
@@ -56,20 +55,21 @@ void strcpy_safe(char (& output)[charCount], const char * pSrc)
   @arg @c output A reference to the destination C-string of size @c charCount.
   @arg @c pSrc The dynamically allocated source C-string.
 */
-void strcpy_safe(char * (& output), const char * pSrc)
-{
-	size_t charCount = sizeof(output) / sizeof(output[0]);
+void strcpy_safe(char * (& output), const char * pSrc) {
+  size_t charCount = sizeof(output) / sizeof(output[0]);
 
-	// Don't accept a NULL C-string pointer.
-	/// @todo Thow an exception to indicate an error.
-	if(NULL == output) return;
+  // Don't accept a NULL C-string pointer.
+  /// @todo Thow an exception to indicate an error.
+  if(NULL == output) {
+    return;
+  }
 
-	// @todo Implement YourCopyNFunction(output, pSrc, charCount);
-	//YourCopyNFunction(output, pSrc, charCount);
-	// Copy the string -- don't copy too many bytes.
-	strncpy(output, pSrc, charCount);
-	// Ensure null-termination.
-	output[charCount - 1] = 0;
+  // @todo Implement YourCopyNFunction(output, pSrc, charCount);
+  //YourCopyNFunction(output, pSrc, charCount);
+  // Copy the string -- don't copy too many bytes.
+  strncpy(output, pSrc, charCount);
+  // Ensure null-termination.
+  output[charCount - 1] = 0;
 }
 
 #endif //__UTILITYFUNCTIONS_HPP__
