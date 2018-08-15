@@ -1,0 +1,65 @@
+# Brace Style Options
+# -----
+--style=attach
+
+# Tab Options
+# -----
+--indent=spaces=2
+
+# Brace Modify Options
+# -----
+--attach-namespaces
+--attach-classes
+--attach-inlines
+--attach-extern-c
+#--attach-closing-while
+
+# Indentation Options
+# -----
+--indent-classes
+--indent-modifiers
+--indent-switches
+--indent-cases
+--indent-namespaces
+#--indent-after-parens
+#--indent-continuation=2
+#--indent-labels
+#--indent-preproc-block
+#--indent-preproc-define
+#--indent-preproc-cond
+#--indent-col1-comments
+#--min-conditional-indent=#
+#--max-continuation-indent=#
+
+# Padding Options
+# -----
+--break-blocks
+--pad-oper
+--pad-comma
+#--pad-paren
+#--pad-paren-out
+#--pad-first-paren-out
+#--pad-paren-in
+#--pad-header
+--unpad-paren
+--delete-empty-lines
+--align-pointer=middle
+--align-reference=middle
+
+# Formatting Options
+# -----
+#--break-closing-braces
+--break-one-line-headers
+--add-brackets # new versions use --add-braces
+#--add-braces
+#--attach-return-type
+--convert-tabs
+--remove-comment-prefix
+--max-code-length=79
+--break-after-logical
+
+# Other Options
+# -----
+--suffix=none
+#--verbose
+--formatted
